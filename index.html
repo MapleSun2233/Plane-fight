@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>星球大战</title>
+    <style>
+        .canvas-box{
+            width: 1024px;
+            margin:0px auto;
+        }
+        #infoP{
+            position:absolute;
+            top:1%;
+            left:50%;
+            margin-left:-512px;
+            line-height:2em;
+            width: 1024px;
+            background-color:rgba(100,100,100,0.6);
+            display: flex;
+            justify-content: space-around;
+            color:yellowgreen;
+        }
+        #view{
+            position:absolute;
+            top:1%;
+            left:50%;
+            margin-left:-512px;
+            width: 1024px;
+            height: 768px;
+            background-color:rgba(255,255,255,0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .logo{
+            width: 219px;
+            height: 153px;
+            margin:0px auto;
+            display: none;
+        }
+        .gameRule{
+            width: 600px;
+            margin:0 auto;
+            font-size:16px;
+            text-align:justify;
+            height:500px;
+            overflow: auto;
+            display: none;
+        }
+        #view form{
+            width: 100%;
+            margin:auto;
+        }
+        #view p{
+            width:100%;
+            text-align:center;
+            line-height:2em;
+        }
+        #view p input{
+            height:2em;
+            text-align:center;
+        }
+
+        #view table{
+            width: 600px;
+            margin:0 auto;
+        }
+        #view td,th{
+            text-align:center;
+        }
+        #btns{
+            position:absolute;
+            top:7%;
+            right:50%;
+            margin-right:-512px;
+            width: 150px;
+        }
+        #submitBtn{
+            margin:0 auto;
+        }
+        .animateBtn{
+            position: relative;
+            width: 150px;
+            height: 50px;
+            line-height:50px;
+            text-align:center;
+            margin:10px 0px;
+            background-color:#f39c12;
+            border-radius: 20px;
+            cursor:pointer;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+        }
+        .animateBtn span{
+            display: block;
+            width: 0px;
+            height:0px;
+            border-radius: 50%;
+            position:absolute;
+            top:0px;
+            bottom: 0px;
+            left:0px;
+            right:0px;
+            margin:auto;
+            background-color:rgba(255,255,255,0.5);
+            transition:all .3s;
+        }
+        .animateBtn:hover span{
+            width: 50px;
+            height:50px;
+        }
+        .size12{
+            font-size:12px;
+        }
+        .size16{
+            font-size:16px;
+        }
+        .size20{
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <audio src="./media/audio/background.mp3" id="bgMusic"></audio>
+    <audio src="./media/audio/hit.mp3" id="crashMusic"></audio>
+    <audio src="./media/audio/star.mp3" id="energyMusic"></audio>
+    <audio src="./media/audio/finish.mp3" id="overMusic"></audio>
+    <audio src="./media/audio/destroyed.mp3" id="dieMusic"></audio>
+    <audio src="./media/audio/shoot.mp3" id="bulletMusic"></audio> -->
+    <div class="canvas-box">
+        <canvas id="canvas">
+
+        </canvas>
+        <p id="infoP"><span>能量：00</span><span>00:00</span><span>分数00</span></p>
+    </div>
+    <div id="view">
+        <img src="./image/logo-02.png" alt="" class="logo">
+        <div class="gameRule">
+            
+        </div>
+    </div>
+    <div id="btns">
+        <div class="animateBtn">开启/关闭音效<span></span></div>
+        <div class="animateBtn">放大字体<span></span></div>
+        <div class="animateBtn">缩小字体<span></span></div>
+        <div class="animateBtn">暂停/继续<span></span></div>
+        <div class="animateBtn">游戏开始<span></span></div>
+    </div>
+
+    <script src="./JQuery/jquery-3.2.1.min.js"></script>
+    <script src="./tool.js"></script>
+    <script src="./planet.js"></script>
+    <script src="./aestroid.js"></script>
+    <script src="./bullet.js"></script>
+    <script src="./ship.js"></script>
+    <script src="./energy.js"></script>
+    <script src="./self.js"></script>
+    <script src="./crash.js"></script>
+    <script src="./timer.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+</html>
